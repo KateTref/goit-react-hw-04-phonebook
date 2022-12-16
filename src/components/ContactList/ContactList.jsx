@@ -4,6 +4,7 @@ import Contact from 'components/Contact/Contact';
 import css from './ContactList.module.css';
 
 const ContactList = ({ items, onDelete }) => {
+  console.log(items);
   return (
     <ul>
       {items.map((item, idx) => (
