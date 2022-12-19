@@ -12,7 +12,7 @@ function ContactForm({ onSubmit, contacts }) {
       alert(name.value + ' is already in contacts');
       return;
     }
-    onSubmit(name.value, number.value);
+    onSubmit({ name: name.value, number: number.value });
     name.value = '';
     number.value = '';
   };

@@ -15,9 +15,8 @@ function App() {
     localStorage.setItem('contacts', JSON.stringify(contacts));
   }, [contacts]);
 
-  function addContact(name, number) {
-    console.log(name);
-    setContacts(prevState => [...prevState, { id: nanoid(), name, number }]);
+  function addContact(contact) {
+    setContacts(prevState => [...prevState, { id: nanoid(), ...contact }]);
   }
 
   function deleteContact(contactId) {
